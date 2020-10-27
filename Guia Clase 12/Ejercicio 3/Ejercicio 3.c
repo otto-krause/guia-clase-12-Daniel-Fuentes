@@ -1,7 +1,7 @@
   #include <stdlib.h>
   #include <stdio.h>
 
-  int porcentajeHom();
+  int porcentajeHom();//Faltan partes del ejercicio.
   int porcentajeMuj();
   int hom, muj, total;
 

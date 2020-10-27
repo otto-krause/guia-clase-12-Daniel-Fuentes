@@ -4,7 +4,7 @@
 
     void main()
     {
-        int r1, r2, r3, r4, r5;
+        int r1, r2, r3, r4, r5;//Se puede ingresar en una sola variable a través de una estructura repetitiva.
         printf("Ingrese las 5 resistencias en serie\n");
         scanf("%d %d %d %d %d", &r1, &r2, &r3, &r4, &r5);
         system("cls");
