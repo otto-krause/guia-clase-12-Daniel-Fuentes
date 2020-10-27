@@ -1,24 +1,32 @@
   #include <stdlib.h>
   #include <stdio.h>
 
-  int porcentajeHom();//Faltan partes del ejercicio.
-  int porcentajeMuj();
+  float porcentajeHom();
+  float porcentajeMuj();
   int hom, muj, total;
 
-  int porcentajeHom()
+  float porcentajeHom(int cantH, int t)
   {
       int porcenHom;
-      printf("Ingrese la cantidad de hombres que enviaron su curriculum\n");
-      scanf("%d", &hom);
-      total = hom + muj;
-      porcenHom = hom*100/(total);
-      return
+      porcenHom = cantH*100/(t);
+      return porcenHom;
   }
-  int porcentajeMuj()
+  float porcentajeMuj(int cantM, int t)
   {
       int porcenMuj;
-      printf("Ingrese la cantidad de mujeres que enviaron su curriculum\n");
-      scanf("%d", muj);
-      porcenMuj = hom*100/(total);
+      porcenMuj = cantM*100/(t);
       return porcenMuj;
+  }
+
+  int main()
+  {
+      printf("Ingrese la cantidad de hombres que enviaron su curriculum\n");
+      scanf("%d", &hom);
+      printf("Ingrese la cantidad de mujeres que enviaron su curriculum\n");
+      scanf("%d", &muj);
+      total = hom + muj;
+
+      printf("El porcentaje de mujeres que enviaron su curriculum es de %.2f\n", porcentajeMuj(muj, total));
+      printf("El porcentaje de hombres que enviaron su curriculum es de %.2f", porcentajeHom(hom, total));
+      return 0;
   }
